@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
+import { AgmCoreModule } from '@agm/core';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
@@ -12,6 +14,7 @@ import { GetInvolvedFormComponent } from './get-involved/get-involved-form/get-i
 import { PaypalComponent } from './get-involved/paypal/paypal.component';
 import { AboutComponent } from './about/about.component';
 import { HttpService } from './http.service';
+import { MapComponent } from './shared/map/map.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,13 +30,17 @@ const appRoutes: Routes = [
     GetInvolvedComponent,
     GetInvolvedFormComponent,
     PaypalComponent,
-    AboutComponent
+    AboutComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBRQvvfmfP-8gX8gJHRYAUpkrWadQX4jK0'
+    })
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]
