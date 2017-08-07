@@ -1,4 +1,6 @@
-<!-- <img class="img-full-width "src="../assets/images/baby-tree.jpg" alt="GreenStand nurtures trees"> -->
-<div>
-    <app-map></app-map>    
-</div>
+<img class="img-full-width "src="../assets/images/baby-tree.jpg" alt="GreenStand nurtures trees">
+    <h1>{{ title }}</h1>
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="5">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+

@@ -9,8 +9,8 @@ import { AgmCoreModule } from '@agm/core';
 })
 export class MapComponent implements OnInit {
   title = 'First Map in Angular 4!';
-  lat = 51.678418;
-  lng = 7.809007;
+  lat = 6.49;
+  lng = 39.16;
   constructor() { }
 
   ngOnInit() {

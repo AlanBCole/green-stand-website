@@ -5,7 +5,7 @@ import 'rxjs/Rx';
 @Injectable()
 export class HttpService {
     constructor(private http: Http) {}
-    
+
     getTeam() {
         return this.http.get('https://treetracker-24de7.firebaseio.com/team-members.json');
         // .map(
@@ -14,5 +14,9 @@ export class HttpService {
         //         console.log(team);
         //         return team;
         // });
+    }
+
+    getTrees() {
+        return this.http.get('http://treetracker.org/trees/json/all');
     }
 }

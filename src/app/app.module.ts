@@ -14,7 +14,7 @@ import { GetInvolvedFormComponent } from './get-involved/get-involved-form/get-i
 import { PaypalComponent } from './get-involved/paypal/paypal.component';
 import { AboutComponent } from './about/about.component';
 import { HttpService } from './http.service';
-import { MapComponent } from './shared/map/map.component';
+// import { MapComponent } from './shared/map/map.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -31,7 +31,7 @@ const appRoutes: Routes = [
     GetInvolvedFormComponent,
     PaypalComponent,
     AboutComponent,
-    MapComponent
+    // MapComponent
   ],
   imports: [
     BrowserModule,
